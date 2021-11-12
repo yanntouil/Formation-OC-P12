@@ -1,0 +1,21 @@
+/**
+ * Section
+ */
+
+
+
+
+
+
+.section {
+    &-header {
+        margin-bottom: 4rem;
+    }
+    &-title {
+        font-size: 3rem;
+    }
+    &-secondary {
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+}

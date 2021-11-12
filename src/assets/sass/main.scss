@@ -1,0 +1,39 @@
+/**
+ * Main Sass file
+ */
+
+ @use 'sass:math';
+
+
+
+ // Variables
+ @import 'variables';
+ 
+ // Functions
+ 
+ // Mixins
+ @import 'mixins/box-shadow';
+ @import 'mixins/media-queries';
+ 
+ // Animations
+ 
+ // Reset
+ @import 'reset';
+ 
+ // Components
+ @import 'components/section';
+ @import 'components/recharts';
+ @import 'components/chart-activity';
+ @import 'components/chart-average-sessions';
+ @import 'components/chart-performance';
+ @import 'components/chart-score';
+ @import 'components/stats';
+ @import 'components/loader';
+
+ 
+ // Pages
+ @import 'pages/homepage';
+
+ // Layout
+ @import 'layout';
+ 

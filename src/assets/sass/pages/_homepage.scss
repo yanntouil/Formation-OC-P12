@@ -1,0 +1,31 @@
+/**
+ * Homepage
+ */
+
+
+
+    
+
+
+.homepage {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto;
+        gap: 2em 2em;
+        grid-auto-flow: row;
+        @include media-min('xl') {
+            grid-template-areas:
+                "activity activity activity activity activity activity activity activity activity stats stats stats"
+                "average-sessions average-sessions average-sessions performance performance performance score score score stats stats stats";
+            font-size: 1vw;
+        }
+        @include media-max('xl') {
+            font-size: 1.3vw;
+            grid-template-areas:
+                "stats stats stats stats stats stats stats stats stats stats stats stats"
+                "activity activity activity activity activity activity activity activity activity activity activity activity"
+                "average-sessions average-sessions average-sessions average-sessions performance performance performance performance score score score score";
+        }
+    }
+}

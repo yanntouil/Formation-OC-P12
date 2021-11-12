@@ -1,0 +1,55 @@
+/**
+ * Chart activity
+ */
+
+
+
+
+
+
+.chart-activity {
+    grid-area: activity;
+    position: relative;
+    height: 20em;
+    padding: 6em 2em 2em;
+    border-radius: 0.375em;
+    background-color: $lightBG;
+    .chart-title {
+        position: absolute; top: 2em; left: 2em;
+    }
+    .chart-legend {
+        position: absolute; top: 2em; right: 2em;
+        display: flex;
+        gap: 2em;
+        li {
+            display: flex; align-items: center;
+            gap: 0.625em;
+        }
+        li:before {
+            display: block;
+            content: '';
+            width: 0.5em; height: 0.5em;
+            border-radius: 0.25em;
+        }
+        li:first-child {
+            color: $secondary;
+            &:before {
+                background-color: $secondary;
+            }
+        }
+        li:last-child {
+            color: $primary;
+            &:before {
+                background-color: $primary;
+            }
+        }
+    }
+    .chart-tooltip {
+        display: flex; flex-direction: column; justify-content: center;
+        gap: 1em;
+        padding: 1em 0.375em;
+        background-color: $primary;
+        color: $white;
+        font-size: 0.75em;
+    }
+}

@@ -1,0 +1,61 @@
+/**
+ * Stat
+ */
+
+
+
+
+ .stats {
+    grid-area: stats;
+    @include media-min('xl') {
+        display: flex; flex-direction: column; justify-content: space-between;
+    }
+    @include media-max('xl') {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
+    }
+}
+
+.stat {
+    display: flex; justify-content: stretch; align-items: center;
+    padding: 1.5em;
+    gap: 1.5em;
+    border-radius: 0.375em;
+    background-color: $lightBG;
+    &-icon {
+        display: flex; justify-content: center; align-items: center;
+        width: 4em; height: 4em;
+        border-radius: 0.375em;
+        &.icon-red {
+            background-color: rgba($primary, .07);
+        }
+        &.icon-blue {
+            background-color: rgba($blue, .1);
+        }
+        &.icon-yellow {
+            background-color: rgba($yellow, .1);
+        }
+        &.icon-pink {
+            background-color: rgba($pink, .1);
+        }
+    }
+    &-title {
+        margin-bottom: 0.125em;
+        color: #282D30;
+        font-size: 1.25em;
+        font-weight: 700;
+        line-height: 1.5em;
+        @include media-min('xl') {
+            font-size: 1.25em;
+        }
+        @include media-max('xl') {
+            font-size: 1em;
+        }
+    }
+    &-secondary {
+        color: #74798C;
+        font-size: 0.875em;
+        line-height: 1.5em;
+    }
+}

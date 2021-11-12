@@ -1,0 +1,32 @@
+/**
+ * Variables
+ */
+
+
+
+
+
+
+// Breakpoint
+$breakpoints: (
+    'sm':   640px,
+    'md':   768px,
+    'lg':   1024px,
+    'xl':   1280px,
+    '2xl':  1536px
+    ) !default;
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$darkBG: #020203;
+$lightBG: #FBFBFB;
+$primary: #E60000;
+$secondary: #282D30;
+$blue: #4AB8FF;
+$yellow: #F9CE23;
+$pink: #FD5181;
+
+// Layout
+$header-h: 5.625rem;
+$siderbar-w: 7.375rem;

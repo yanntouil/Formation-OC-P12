@@ -1,0 +1,32 @@
+/**
+ * Chart score
+ */
+
+
+
+
+
+
+.chart-score {
+    grid-area: score;
+    width: 100%; aspect-ratio: 1 / 1;
+    border-radius: 0.375em;
+    background-color: $lightBG;
+    position: relative;
+    padding: 2rem;
+    .chart-title {
+        position: absolute; top: 2em; left: 2em;
+    }
+    .chart-legend {
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        &-1 {
+            color: $secondary;
+            font-size: 2em;
+        }
+        &-2 {
+            text-align: center;
+            font-size: 1em;
+            color: rgba($secondary, .8);
+        }
+    }
+}
