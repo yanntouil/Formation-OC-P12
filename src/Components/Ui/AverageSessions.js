@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 /**
@@ -7,7 +8,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
  * @param {Array} params.data
  * @return {JSX} 
  */
-export default function AverageSessions({data}) {
+const AverageSessions = ({data}) => {
     // Format day of the week
     const daysWeek = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' }
     const formatDay = (item) => daysWeek[item]
@@ -45,6 +46,13 @@ export default function AverageSessions({data}) {
     )
 }
 
+// Props types
+AverageSessions.propTypes = {
+    data: propTypes.array.isRequired,
+};
+
+export default AverageSessions
+
 /**
  * Show custom tooltip
  * @param {Object} params
@@ -58,4 +66,9 @@ const CustomTooltip = ({ active, payload }) => active ? (
     </div>
 ) : null
 
+// Props types
+CustomTooltip.propTypes = {
+    active: propTypes.bool,
+    payload: propTypes.array,
+};
 

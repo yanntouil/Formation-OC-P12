@@ -93,3 +93,26 @@ body {
     margin: $header-h 0 0 $siderbar-w;
     padding: 4rem 6vw;
 }
+
+.connection-lost {
+    display: flex; flex-direction: column;
+    gap: 1rem;
+    padding: 2em;
+    border-radius: 0.375em;
+    background-color: $lightBG;
+    &-title {
+        color: $primary;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &-actions {
+        display: flex; justify-content: center;
+    }
+    &-button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.375em;
+        background-color: $primary;
+        color: $white;
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types';
 
 /**
  * Show a loader
@@ -6,7 +7,7 @@ import React from 'react'
  * @param {string} params.color
  * @return {JSX} 
  */
-export default function loader({color}) {
+const Loader = ({color}) => {
     return (
         <div className={color ? `loader ${color}` : 'loader'}>
             <div>
@@ -19,3 +20,9 @@ export default function loader({color}) {
     )
 }
 
+// Props types
+Loader.propTypes = {
+    color: propTypes.string,
+};
+
+export default Loader

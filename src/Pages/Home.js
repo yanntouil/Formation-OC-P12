@@ -8,12 +8,14 @@ import Performance from '../Components/Ui/Performance';
 import Score from '../Components/Ui/Score';
 import Loader from '../Components/Ui/Loader';
 
-
+/**
+ *
+ */
 export default function Home() {
     const context = useContext(DashboardContext)
-    const {user, activity, averageSessions, performance, performanceKind} = context
+    const {user, activity, averageSessions, performance, performanceKind, apiError} = context
 
-    return (
+    return !apiError ? (
         <section className="homepage">
             {user ? (
                 <>
@@ -42,7 +44,21 @@ export default function Home() {
                     </div>
                 </>
                 ) : <Loader />
-            }
+            })
+        </section>
+    ) : (
+        <section className="connection-lost">
+            <h1 className="connection-lost-title">Oups !</h1>
+            <p className="connection-lost-secondary">
+                La connexion avec notre serveur a été perdu, n'hésitez pas à verifier votre connexion internet et à rafraichir la page et si le problème persite merci de contacter un administrateur.
+            </p>
+            <div className="connection-lost-actions">
+                <button 
+                type="button" 
+                className="connection-lost-button"
+                onClick={(e) => window.location.reload()}
+                >Rafraichir la page</button>
+            </div>
         </section>
     )
 }

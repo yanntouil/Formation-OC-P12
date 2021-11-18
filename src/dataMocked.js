@@ -3,7 +3,7 @@
  */
 
 
-export const users = [
+export const usersMocked = [
     {
         id: 12,
         userInfos: {
@@ -36,7 +36,7 @@ export const users = [
     }
 ]
 
-export const activities = [
+export const activitiesMocked = [
     {
         userId: 12,
         sessions: [
@@ -119,7 +119,7 @@ export const activities = [
     }
 ]
 
-export const averageSessions = [
+export const averageSessionsMocked = [
     {
         userId: 12,
         sessions: [
@@ -188,7 +188,7 @@ export const averageSessions = [
     }
 ]
 
-export const performance = [
+export const performanceMocked = [
     {
         userId: 12,
         kind: {
@@ -264,3 +264,4 @@ export const performance = [
         ]
     }
 ]
+

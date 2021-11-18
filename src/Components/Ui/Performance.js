@@ -1,5 +1,6 @@
 import React from 'react'
-import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+import propTypes from 'prop-types'
+import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
 /**
  * Show average sessions chart
@@ -8,7 +9,7 @@ import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, ResponsiveContain
  * @param {Object} params.kind
  * @return {JSX} 
  */
-export default function Performance({data, kind}) {
+const Performance = ({data, kind}) => {
 
     // Rotate radar to start with intensity
     const angleStart = 210
@@ -53,3 +54,11 @@ export default function Performance({data, kind}) {
         </>
     )
 }
+
+// Props types
+Performance.propTypes = {
+    data: propTypes.array.isRequired,
+    kind: propTypes.object.isRequired,
+}
+
+export default Performance

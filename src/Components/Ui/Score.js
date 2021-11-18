@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types';
 import { PieChart, Pie, Legend, Cell, ResponsiveContainer } from 'recharts';
 
 /**
@@ -7,7 +8,7 @@ import { PieChart, Pie, Legend, Cell, ResponsiveContainer } from 'recharts';
  * @param {Number} params.data
  * @return {JSX} 
  */
-export default function Score({data}) {
+const Score = ({data}) => {
     return (
         <>
             <h2 className="chart-title">Score</h2>
@@ -42,6 +43,15 @@ export default function Score({data}) {
     )
 }
 
+// Props types
+Score.propTypes = {
+    data: propTypes.number.isRequired,
+}
+
+export default Score
+
+
+
 /**
  * Show custom legend
  * @param {Object} params
@@ -54,3 +64,8 @@ const CustomLegend = ({ payload }) => (
         <div className="chart-legend-2">de votre objectif</div>
     </div>
 )
+
+// Props types
+CustomLegend.propTypes = {
+    payload: propTypes.array,
+}

@@ -1,5 +1,6 @@
 import React from 'react'
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';//, Legend
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'//, Legend
+import propTypes from 'prop-types'
 
 /**
  * Show activity chart
@@ -7,10 +8,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContaine
  * @param {Array} params.data
  * @return {JSX} 
  */
-export default function Activity({data}) {
+const Activity = ({data}) => {
     const formatDay = (item) => (new Date(item)).getDate()
     // const formatLegend = (value) => value === 'kilogram' ? 'Poids (kg)' : 'Calories brûlées (kCal)'
-
     return (
         <>
             <h2 className="chart-title">Activité quotidienne</h2>
@@ -79,6 +79,13 @@ export default function Activity({data}) {
     )
 }
 
+// Props types
+Activity.propTypes = {
+    data: propTypes.array.isRequired,
+}
+
+export default Activity
+
 /**
  * Show custom tooltip
  * @param {Object} params
@@ -93,3 +100,8 @@ const CustomTooltip = ({ active, payload }) => active ? (
     </div>
 ) : null
 
+// Props types
+CustomTooltip.propTypes = {
+    active: propTypes.bool,
+    payload: propTypes.array,
+}
