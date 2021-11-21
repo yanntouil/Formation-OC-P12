@@ -2,17 +2,7 @@
 # Project 12 - Front-end Dashboard
 This repo contains all the source code to run the React application for the sports analytics dashboard SportSee.
 
-## General information
-
-
-version de node 
-editeur de text recommandé
-version de react
-mode nescéssaire
-
-depot api + démarage
-
-# Getting Started
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 and use
