@@ -1,5 +1,5 @@
 
-# Project 9 - Front-end Dashboard
+# Project 12 - Front-end Dashboard
 This repo contains all the source code to run the React application for the sports analytics dashboard SportSee.
 
 ## General information
@@ -25,6 +25,11 @@ We recommend to use [Visual Studio Code](https://code.visualstudio.com/) to edit
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install each dependencies to launch this project
+
 ### `npm start`
 
 Runs the app in the development mode.\
